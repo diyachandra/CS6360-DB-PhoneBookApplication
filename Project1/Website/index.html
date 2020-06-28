@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Contact Application</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -14,59 +16,99 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/jquery.inputmask.js"></script>
-
   </head>
 
   <body>
-
     <div class="container-fluid">
-      <div class="row" style="height: 100vh">
+      <div class="row" style="height: 100vh;">
         <div class="col-4 bg-dark">
-          <br>
-          <div style="height: 5vh">
+          <br />
+          <div style="height: 5vh;">
             <!-- <input type="text" placeholder="Search.."> -->
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <a class="input-group-text" id="searchButton">&#128270;</a>
               </div>
-              <input type="text" id='searchTextInput' class="form-control" placeholder="Enter search query" aria-label="Username" aria-describedby="basic-addon1">
+              <input
+                type="text"
+                id="searchTextInput"
+                class="form-control"
+                placeholder="Enter search query"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+              />
 
-              <button type="button" name="button" id="createButton" class="btn btn-success" data-toggle="modal" data-target="#createModalScrollableTitle">Create New Contact</button>
+              <button
+                type="button"
+                name="button"
+                id="createButton"
+                class="btn btn-success"
+                data-toggle="modal"
+                data-target="#createModalScrollableTitle"
+              >
+                Create New Contact
+              </button>
             </div>
-          </div><br>
-          <div class="progress">
-            <div id='prgBar' class="progress-bar progress-bar-striped progress-bar-animated bg-warning text-dark" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
           </div>
-          <div class="overflow-auto" id='leftPane' style="height: 86vh">
-            <ul class="list-group h-90" id="contactsList">
-
-            </ul>
+          <br />
+          <div class="progress">
+            <div
+              id="prgBar"
+              class="progress-bar progress-bar-striped progress-bar-animated bg-warning text-dark"
+              role="progressbar"
+              aria-valuenow="75"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              style="width: 0%;"
+            ></div>
+          </div>
+          <div class="overflow-auto" id="leftPane" style="height: 86vh;">
+            <ul class="list-group h-90" id="contactsList"></ul>
           </div>
         </div>
         <div class="col-8 bg-light">
-          <br>
+          <br />
           <div class="container-fluid">
             <div class="row">
               <div class="col-6">
-                <button type="button " name="update" id="updateButton" class="btn btn-info" data-toggle="modal" data-target="#exampleModalScrollable" disabled="disabled">Update</button>
+                <button
+                  type="button "
+                  name="update"
+                  id="updateButton"
+                  class="btn btn-info"
+                  data-toggle="modal"
+                  data-target="#exampleModalScrollable"
+                  disabled="disabled"
+                >
+                  Update
+                </button>
                 &nbsp; &nbsp;
-                <button type="button" name="delete" id="deleteButton" class="btn btn-danger" disabled="disabled">Delete</button>
+                <button
+                  type="button"
+                  name="delete"
+                  id="deleteButton"
+                  class="btn btn-danger"
+                  disabled="disabled"
+                >
+                  Delete
+                </button>
               </div>
-              <div class="col-6 bg-light" >
-                <h4 class="display-12"><b><i>Phone Book Application System</i></b></h4>
-            </div>
+              <div class="col-6 bg-light">
+                <h4 class="display-12">
+                  <b><i>Phone Book Application System</i></b>
+                </h4>
+              </div>
             </div>
           </div>
-          <br>
-          <div class="card overflow-auto" id="mainCard" style="height:86vh">
+          <br />
+          <div class="card overflow-auto" id="mainCard" style="height: 86vh;">
             <table class="table" id="nameTable" style="width: 100%;">
               <thead class="thead-dark">
                 <tr>
                   <th>Name</th>
                 </tr>
               </thead>
-              <tbody id="nameRow">
-              </tbody>
+              <tbody id="nameRow"></tbody>
             </table>
 
             <table class="table" id="phoneTable" style="width: 100%;">
@@ -75,9 +117,7 @@
                   <th scope="col">Phone</th>
                 </tr>
               </thead>
-              <tbody id="phoneRow">
-
-              </tbody>
+              <tbody id="phoneRow"></tbody>
             </table>
             <table class="table" id="addressTable" style="width: 100%;">
               <thead class="thead-dark">
@@ -85,8 +125,7 @@
                   <th scope="col">Address</th>
                 </tr>
               </thead>
-              <tbody id="addressRow">
-              </tbody>
+              <tbody id="addressRow"></tbody>
             </table>
             <table class="table" id="dateTable" style="width: 100%;">
               <thead class="thead-dark">
@@ -94,97 +133,168 @@
                   <th scope="col">Date</th>
                 </tr>
               </thead>
-              <tbody id="dateRow">
-              </tbody>
+              <tbody id="dateRow"></tbody>
             </table>
-            <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-              <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+            <div
+              class="modal fade"
+              id="exampleModalScrollable"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="exampleModalScrollableTitle"
+              aria-hidden="true"
+            >
+              <div
+                class="modal-dialog modal-xl modal-dialog-scrollable"
+                role="document"
+              >
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalScrollableTitle">Update Contact Details</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <h5 class="modal-title" id="exampleModalScrollableTitle">
+                      Update Contact Details
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div class="modal-body">
                     <form id="modalbody">
-                      <div class="form-row" id='nameSectionDiv'>
-
+                      <div class="form-row" id="nameSectionDiv">
                         <div class="form-group col-md-4">
                           <label for="inputFname">First Name</label>
-                          <input name="Fname" class="form-control" id="inputFname">
+                          <input
+                            name="Fname"
+                            class="form-control"
+                            id="inputFname"
+                          />
                         </div>
 
                         <div class="form-group col-md-4">
                           <label for="inputMname">Middle Name</label>
-                          <input name="Mname" class="form-control" id="inputMname">
+                          <input
+                            name="Mname"
+                            class="form-control"
+                            id="inputMname"
+                          />
                         </div>
 
                         <div class="form-group col-md-4">
                           <label for="inputLname">Last Name</label>
-                          <input name="Lname" class="form-control" id="inputLname">
+                          <input
+                            name="Lname"
+                            class="form-control"
+                            id="inputLname"
+                          />
                         </div>
-
                       </div>
-                      <div id="restSectionDiv">
-
-                      </div>
+                      <div id="restSectionDiv"></div>
                     </form>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="saveButton">Save changes</button>
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      id="saveButton"
+                    >
+                      Save changes
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
 
-
-
-            <div class="modal fade" id="createModalScrollableTitle" tabindex="-1" role="dialog" aria-labelledby="createModalScrollableTitle" aria-hidden="true">
-              <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+            <div
+              class="modal fade"
+              id="createModalScrollableTitle"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="createModalScrollableTitle"
+              aria-hidden="true"
+            >
+              <div
+                class="modal-dialog modal-xl modal-dialog-scrollable"
+                role="document"
+              >
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="createModalScrollableTitle">Create Contact Details</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <h5 class="modal-title" id="createModalScrollableTitle">
+                      Create Contact Details
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div class="modal-body">
                     <form id="createmodalbody">
-                      <div class="form-row" id='createnameSectionDiv'>
-
+                      <div class="form-row" id="createnameSectionDiv">
                         <div class="form-group col-md-4">
                           <label for="inputFname">First Name</label>
-                          <input name="Fname" class="form-control" id="createinputFname">
+                          <input
+                            name="Fname"
+                            class="form-control"
+                            id="createinputFname"
+                          />
                         </div>
 
                         <div class="form-group col-md-4">
                           <label for="inputMname">Middle Name</label>
-                          <input name="Mname" class="form-control" id="createinputMname">
+                          <input
+                            name="Mname"
+                            class="form-control"
+                            id="createinputMname"
+                          />
                         </div>
 
                         <div class="form-group col-md-4">
                           <label for="inputLname">Last Name</label>
-                          <input name="Lname" class="form-control" id="createinputLname">
+                          <input
+                            name="Lname"
+                            class="form-control"
+                            id="createinputLname"
+                          />
                         </div>
-
                       </div>
-                      <div id="createrestSectionDiv">
-
-                      </div>
+                      <div id="createrestSectionDiv"></div>
                     </form>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="createsaveButton">Save changes</button>
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      id="createsaveButton"
+                    >
+                      Save changes
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
-
-
-
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
-
 </html>
